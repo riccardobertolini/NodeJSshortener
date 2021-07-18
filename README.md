@@ -5,7 +5,7 @@ A simple app that create, cache and redirects using shorteners
 
 ---
 ### Demo
-[Click here for a demo](https://nodejsshortener.netlify.app/)
+[Click here for a demo](https://node-js-shortener.vercel.app//)
 
 
 ---

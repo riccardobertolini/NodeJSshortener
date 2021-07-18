@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", function (req, res) {
-  res.sendFile("form.html", { root: __dirname + "/public" });
+  res.sendFile("form.html", { root: __dirname });
 });
 
 app.get("/url/:shortnerCode", function (req, res) {
@@ -17,7 +17,7 @@ app.get("/url/:shortnerCode", function (req, res) {
   if (result) {
     res.redirect(result);
   } else {
-    res.sendFile("form.html", { root: __dirname + "/public" });
+    res.sendFile("form.html", { root: __dirname });
   }
 });
 

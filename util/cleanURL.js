@@ -1,4 +1,3 @@
 module.exports.cleanURL = (url) => {
-  const newURL = new URL(url.toString());
-  return newURL.origin + encodeURI(newURL.search);
+  return url.replace(new RegExp('<[^>]*>', 'g'), '');
 };

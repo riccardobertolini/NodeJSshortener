@@ -1,6 +1,6 @@
-# NodeJS Shortner
+# NodeJS Shortener
 
-A simple app that create, cache and redirects using shortners
+A simple app that create, cache and redirects using shorteners
 
 ---
 ## Requirements

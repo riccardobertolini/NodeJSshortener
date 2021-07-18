@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple URL shortner</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <style>
+      article {
+        background: linear-gradient(
+          to right,
+          hsl(98 100% 62%),
+          hsl(204 100% 59%)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 10vmin;
+        line-height: 1.1;
+      }
+
+      body {
+        background: hsl(204 100% 5%);
+
+        min-block-size: 100%;
+        min-inline-size: 100%;
+        box-sizing: border-box;
+        display: grid;
+        place-content: center;
+        font-family: system-ui;
+        font-size: min(100%, 5vmin);
+      }
+
+      h1,
+      p,
+      body {
+        margin: 0;
+      }
+      body {
+        color: white;
+        text-align: center;
+      }
+
+      p {
+        font-family: "Dank Mono", ui-monospace, monospace;
+      }
+
+      .container {
+        margin-top: 200px;
+      }
+    </style>
+
+    <div class="container">
+      <article>
+        <h1>Hello!</h1>
+        <hr />
+        <p>
+          Put here your URL (complete, with https included) to create a shortner
+          on the way.
+        </p>
+        <p>It will be automatically deleted after 3 hours.</p>
+      </article>
+      <br />
+      <hr />
+      <form method="POST" action="/api">
+        <div class="form-group">
+          <label for="exampleInputEmail1">URL to shortner</label>
+          <input
+            type="text"
+            name="url"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Insert complete URL"
+            required
+          />
+        </div>
+        <div class="form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="exampleCheck1"
+            required
+          />
+          <label class="form-check-label" for="exampleCheck1"
+            >I'll behave, and I won't use this website for bad purposes!</label
+          >
+        </div>
+        <br /><br />
+        <button type="submit" class="btn btn-primary">Short it up!</button>
+      </form>
+    </div>
+  </body>
+</html>

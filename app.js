@@ -2,7 +2,7 @@ const express = require("express");
 const { getCache, updateCache } = require("./util/cacheUtils");
 
 const app = express();
-const port = 5000;
+const port = 5010;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

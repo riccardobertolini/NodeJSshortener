@@ -4,7 +4,7 @@ const { cleanURL } = require("./cleanURL");
 
 // Init values
 let cache = null;
-const expireTime = 60 * 60 * 3; // 24hrs
+const expireTime = 60 * 60 * 3; // 3hrs
 
 module.exports.getCache = (urlCode) => {
   if (!cache) {
